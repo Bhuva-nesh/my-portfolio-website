@@ -1,0 +1,128 @@
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;background:#0a0f1c;color:#f5f5f5;overflow-x:hidden}
+.container{max-width:1100px;margin:auto;padding:40px 20px}
+.section{padding:80px 0;text-align:center;position:relative}
+.section.dark{background:#0d1528}
+h2{font-size:2rem;margin-bottom:20px;color:#0b93ff}
+p{color:#c9c9c9;margin-bottom:12px;line-height:1.6}
+
+/* Header */
+header{position:fixed;top:0;left:0;width:100%;background:rgba(10,15,28,0.95);backdrop-filter:blur(10px);padding:15px 0;z-index:1000;box-shadow:0 2px 6px rgba(0,0,0,0.2)}
+header .container{display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:1.4rem;color:#fff}
+.nav-links{display:flex;list-style:none;gap:20px}
+.nav-links a{color:#c9c9c9;text-decoration:none;font-size:0.95rem;transition:0.3s  }
+.nav-links a:hover{color:#0b93ff}
+
+
+
+
+  
+
+/* Hero Section */
+.hero{height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden}
+.hero-content{position:relative;z-index:2}
+#bgCanvas{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;background:radial-gradient(circle at center,#0a1227,#050913)}
+.hero-content h2{font-size:2.4rem;margin-bottom:10px;animation:fadeUp 1s ease forwards}
+.hero-content span{color:#0b93ff}
+.hero-btns{margin-top:20px}
+.btn,.btn-outline{display:inline-block;padding:10px 20px;border-radius:8px;margin:6px;text-decoration:none;font-weight:600;transition:all 0.3s}
+.btn{background:#0b93ff;color:#fff}
+.btn:hover{transform:translateY(-4px)}
+.btn-outline{border:1px solid #0b93ff;color:#0b93ff;background:transparent}
+.btn-outline:hover{background:#0b93ff;color:#fff}
+
+/* Skills */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;text-align:left}
+.skill-card{background:rgba(255,255,255,0.05);padding:15px;border-radius:10px;transition:transform .3s}
+.skill-card:hover{transform:translateY(-6px)}
+.bar{height:10px;background:#1a1a1a;border-radius:5px;margin-top:10px;overflow:hidden}
+.bar span{display:block;height:100%;background:linear-gradient(90deg,#0b93ff,#00c2ff);width:0;animation:grow 1.3s forwards}
+
+/* Projects */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
+.project-card{background:rgba(255,255,255,0.05);padding:20px;border-radius:12px;transition:all .3s}
+.project-card:hover{transform:translateY(-8px);background:rgba(255,255,255,0.08)}
+
+/* Contact */
+.contact-form{max-width:600px;margin:30px auto;display:flex;flex-direction:column;gap:12px}
+.contact-form input,.contact-form textarea{padding:10px;border:none;border-radius:6px;background:#1a1a1a;color:#fff;outline:none}
+.contact-form button{cursor:pointer}
+#formMsg{margin-top:10px;font-size:.9rem;color:#00c2ff}
+
+/* Footer */
+footer{text-align:center;padding:20px;background:#0b1b3a;color:#999}
+
+/* Fade-in */
+.fade-in{opacity:0;transform:translateY(40px);transition:all 1s ease-out}
+.fade-in.show{opacity:1;transform:translateY(0)}
+
+@keyframes grow{to{width:var(--width,80%)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+
+/* ===== Responsive Navbar (Hamburger Menu) ===== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 100%;
+  background: #0b93ff;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(10, 15, 28, 0.95);
+    width: 200px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    display: none;
+    border-left: 2px solid #0b93ff;
+    border-bottom: 2px solid #0b93ff;
+    border-radius: 0 0 0 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .nav-links a {
+    width: 100%;
+    display: block;
+    padding: 8px 10px;
+  }
+
+  /* Animate burger icon into 'X' */
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(7px);
+  }
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-7px);
+  }
+}

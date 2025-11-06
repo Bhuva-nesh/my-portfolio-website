@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>P. Bhuvanesh — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+<header id="header">
+  <div class="container">
+    <h1 class="logo">P.BHUVANESH</h1>
+
+    <!-- Hamburger icon -->
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+  <!-- ===== HOME / HERO ===== -->
+  <section id="home" class="section hero">
+    <canvas id="bgCanvas"></canvas>
+    <div class="container hero-content">
+      <h2>Hi, I'm <span>Bhuvanesh</span></h2>
+      <p>Motivated and versatile professional with skills in both Network Engineering and Frontend Development.
+         Experienced in configuring and troubleshooting network systems while also designing responsive, interactive web interfaces. Seeking a challenging role that allows me to combine technical networking expertise with creative 
+        web development to deliver efficient and user-focused digital solutions</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="#contact" class="btn-outline">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section fade-in">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Hi, I’m P. Bhuvanesh, a BBA graduate Network Engineer and Frontend Developer passionate about technology and design.
+I enjoy building secure networks and creating responsive, user-friendly websites using HTML, CSS, and JavaScript.
+I’m always eager to learn new tools and improve my skills to deliver smart and reliable digital solutions.</p>
+      <p>Frontend Developer who loves blending technology with creativity.
+I enjoy designing smooth, responsive websites and building strong, secure networks that keep everything connected.
+Always curious, always learning — I’m passionate about turning ideas into smart digital experiences that look great and work perfectly.</p>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section dark fade-in">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card"><h4>Routing & Switching CCNA</h4><div class="bar"><span style="width:90%"></span></div></div>
+        <div class="skill-card"><h4>OSPF/DHCP/RIP/VLAN/ACL</h4><div class="bar"><span style="width:85%"></span></div></div>
+        <div class="skill-card"><h4>JavaScript</h4><div class="bar"><span style="width:80%"></span></div></div>
+        <div class="skill-card"><h4>Network Troubleshooting</h4><div class="bar"><span style="width:75%"></span></div></div>
+        <div class="skill-card"><h4>HTML / CSS </h4><div class="bar"><span style="width:70%"></span></div></div>
+          <div class="skill-card"><h4>REACT js/TAILWIND css</h4><div class="bar"><span style="width:70%"></span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section fade-in">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Office VLAN Network</h3>
+          <p>Designed VLAN-based office network with inter-VLAN routing, ACL filtering, and DHCP service in Cisco Packet Tracer.</p>
+        </div>
+        <div class="project-card">
+          <h3>E-Commerce Website Project</h3>
+          <p>Built a modern, responsive e-commerce website with smooth animations and a clean, user-friendly design.
+Focused on creating an engaging shopping experience with dynamic product displays and seamless navigation.</p>
+        </div>
+        <div class="project-card">
+          <h3>ISP Network Simulation</h3>
+          <p>Created multi-router ISP topology using OSPF and BGP with NAT, redundancy, and IP SLA monitoring.</p>
+        </div>
+        <div class="project-card">
+          <h3>ANIMATED LOGIN FORM Website</h3>
+          <p>Created a stylish, responsive login page with smooth CSS animations and interactive UI for an engaging user experience.</p>
+        </div>
+
+
+        <div class="project-card">
+          <h3>Network Troubleshooting Lab</h3>
+          <p>Used Wireshark to capture and analyze TCP/IP traffic, identify latency sources, and troubleshoot connectivity issues.</p>
+        </div>
+        <div class="project-card">
+          <h3>PORTFOLIO Website</h3>
+          <p>Designed and developed a responsive, animated portfolio to showcase my skills, projects, and creativity using HTML, CSS, and JavaScript.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section dark fade-in">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>📞 <a href="tel:+919361861785">9361861785</a> | ✉️ <a href="mailto:bhuvaneshpalani7@gmail.com">bhuvaneshpalani7@gmail.com</a></p>
+      <p>🌐 <a href="https://linkedin.com/in/bhuvanesh-p" target="_blank">LinkedIn</a> | <a href="https://github.com/Bhuva-nesh" target="_blank">GitHub</a></p>
+
+      <form id="contactForm" class="contact-form">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+        <p id="formMsg"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© <span id="year"></span> P. Bhuvanesh — Network Engineer</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
